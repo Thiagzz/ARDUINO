@@ -9,6 +9,7 @@ const int BT1 = 13;
 
 void setup() {
   pinMode(BT1, INPUT_PULLUP);
+  pinMode(BT2, INPUT_PULLUP);
   servoU.attach(6); //attach é o sinal do motor no arduino
 }
 /*void loop() {
@@ -18,7 +19,7 @@ void setup() {
     servoU.write(90);
   } else {
     servoU.write(0);
-  delay(10); // Pequena pausa para estabilidade do circuito
+  delay(10); // pausa para estabilidade do circuito
   
   }}
 
@@ -27,19 +28,19 @@ void loop() {
   delay(100);
 }
 // 2. Define os pinos dos 6 botões
-const int BT1 = 11; // Controla Servo Topo (Gira 90)
-const int BT2 = 12; // Controla Servo Topo (Gira 0)
-const int BT3 = 13; // Controla Servo Meio (Gira 90)
-const int BT4 = 10; // Controla Servo Meio (Gira 0)
-const int BT5 = 9;  // Controla Servo Baixo (Gira 90)
-const int BT6 = 8;  // Controla Servo Baixo (Gira 0)
+const int BT1 = 11; // Controla Servo Um (Gira 90)
+const int BT2 = 12; // Controla Servo Um (Gira 0)
+const int BT3 = 13; // Controla Servo Dois (Gira 90)
+const int BT4 = 10; // Controla Servo Dois (Gira 0)
+const int BT5 = 9;  // Controla Servo Três (Gira 90)
+const int BT6 = 8;  // Controla Servo Três (Gira 0)
 
 void setup() {
-  // Associa cada objeto ao seu pino físico real
+  // Associa cada objeto ao seu pino físico
   servoU.attach(6); //attach é o sinal do motor no arduino
   servoD.attach(5);
   servoT.attach(3);
-  // Configura os botões com PULLUP interno (necessita ligar o outro lado no GND)
+  // Configura os botões com PULLUP interno
   pinMode(BT1, INPUT_PULLUP);
   pinMode(BT2, INPUT_PULLUP);
   pinMode(BT3, INPUT_PULLUP);
@@ -50,13 +51,12 @@ void setup() {
 */
 void loop()
 {
-  if (digitalRead(BT1) == (HIGH)) {
-    servoU.write(90);
-  }
-  else {
-    servoU.write(0);
-
-    delay(10);
-  }
+    if (digitalRead(BT1) == HIGH)
+    {
+        servoU.write(180);  // gira
+    }
+    else
+    {
+        servoU.write(90);   // para
+    }
 }
-
