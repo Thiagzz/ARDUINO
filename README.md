@@ -4,7 +4,7 @@ PRIMEIRO CONTATO COM ARDUINO USANDO LINGUAGEM C
 
 1 - Servomotor responsável por girar um carretel e enrolar/desenrolar corda.
 2 - Servomotor responsável por girar uma engrenagem de impressora (não em uma impressora) ligada a um rolete.
-3 - Servomotor responsáveç por girar uma coroa/catraca de bicicleta para girar uma corrente (de biciclta também).
+3 - Servomotor responsável por girar uma coroa/catraca de bicicleta para girar uma corrente (de biciclta também).
 
 OBS: Todos os servomotores precisam ser de giro contínuo para suas tarefas.
 
